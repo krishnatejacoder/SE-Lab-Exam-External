@@ -1,3 +1,5 @@
-git config --global user.name "Your Name"
-git config --global user.email "krishnadar05@example.com"
-git config --list
+FROM tomcat:9.0
+
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 8080
+CMD ["catalina.sh","run"]
